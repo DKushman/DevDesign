@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Service 1 | DevDesign.studio</title>
+    <meta name="description" content="Service 1 - DevDesign.studio">
+    <meta name="keywords" content="Service 1">
+    <link rel="canonical" href="https://www.dev-design.studio/service1">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Service 1 | DevDesign.studio">
+    <meta property="og:description" content="Service 1 - DevDesign.studio">
+    <meta property="og:url" content="https://www.dev-design.studio/service1">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Service 1 | DevDesign.studio">
+    <meta name="twitter:description" content="Service 1 - DevDesign.studio">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Preconnect zu CDNs für schnellere Verbindung -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    
+    <!-- Font Loading - Performance optimiert (lädt parallel, blockiert nicht) -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/switzer">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="scrollable">
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-content">
+            <h3 class="cookie-banner-title">Cookie-Einstellungen</h3>
+            <p class="cookie-banner-text">
+                Wir verwenden Cookies, um unsere Website und unseren Service zu optimieren.<br>
+                Einige Cookies sind erforderlich, um die grundlegende Funktionalität sicherzustellen.<br>
+                Andere – wie Google Analytics – helfen uns, diese Website zu verbessern, indem sie anonyme Nutzungsstatistiken erfassen.<br>
+                Du kannst selbst entscheiden, ob du der Verwendung dieser Cookies zustimmst.<br>
+                Weitere Informationen findest du in unserer <a href="datenschutz.html" class="cookie-banner-link">Datenschutzerklärung</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-banner-btn cookie-banner-btn-accept" id="cookieAccept">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Akzeptieren</span>
+                            <span>Akzeptieren</span>
+                        </div>
+                    </span>
+                </button>
+                <button class="cookie-banner-btn cookie-banner-btn-decline" id="cookieDecline">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Ablehnen</span>
+                            <span>Ablehnen</span>
+                        </div>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-image" id="cursorImage">
+        <img src="" alt="Project Preview" id="cursorImageSrc">
+    </div>
+    
+    <!-- Mobile Burger Menu -->
+    <div class="mobile-burger" id="mobileBurger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item" data-index="0">HOME</a>
+            <a href="team.html" class="mobile-menu-item" data-index="1">2 Brüder</a>
+            <div class="mobile-menu-item" data-index="2">Bewerbungsformular</div>
+        </div>
+    </div>
+    
+    <!-- Hauptnavigation mit Header -->
+    <header>
+        <div class="menu" id="menu">
+        <div class="navigation-container">
+            <div class="location-link" id="locationLink">
+                <div class="scroll-text">
+                    <span>BERLIN, GERMANY</span>
+                    <span>BERLIN, GERMANY</span>
+                </div>
+            </div>
+            
+            <div class="center-links" id="centerLinks">
+                <a href="team.html" class="center-link" id="brothersLink">
+                    <div class="scroll-text">
+                        <span>2 BRÜDER</span>
+                        <span>2 BRÜDER</span>
+                    </div>
+                </a>
+                
+                <a href="service1.html" class="center-link" id="servicesLink">
+                    <div class="scroll-text">
+                        <span>SERVICES</span>
+                        <span>SERVICES</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </a>
+                
+                <div class="center-link" id="kundenLink">
+                    <div class="scroll-text">
+                        <span>ARBEITEN</span>
+                        <span>ARBEITEN</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </div>
+                
+                <a href="bewerbungsformular.html" class="center-link" id="projectsLink">
+                    <div class="scroll-text">
+                        <span>BEWERBUNGSFORMULAR</span>
+                        <span>BEWERBUNGSFORMULAR</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="contact-link" id="contactLink">
+                <div class="scroll-text">
+                    <span>KONTAKT</span>
+                    <span>KONTAKT</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Header - Der echte Header (mit mix-blend-mode) -->
+        <a href="index.html" class="header header-static">
+            <span class="word">
+                <span class="first-letter">D</span><span class="rest-letters">evDesign</span>
+            </span>
+            <span class="word">
+                <span class="firstp-letter">.</span><span class="rest-letters">studio</span>
+            </span>
+        </a>
+    </header>
+    
+    <!-- Service Content Container -->
+    <div class="service-content-container">
+    <!-- Service Section -->
+    <section class="service-section">
+        <div class="service-header">
+            <span class="service-tag">[SERVICE 02 — ONLINE-KALENDER]</span>
+            <h1>Online-Kalender für Anwaltskanzleien & Notare</h1>
+            <div class="service-intro">
+                <p class="intro-text">Professionelle Kalenderlösungen, die Ihre Kanzleiverwaltung revolutionieren. Von einfacher Terminbuchung bis zur komplexen Fristenverwaltung mit automatisierten Erinnerungen und nahtloser Integration in Ihre bestehenden Systeme.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kernfunktionen Section -->
+    <section class="kernfunktionen-section">
+        <div class="kernfunktionen-container">
+            <div class="kernfunktionen-header">
+                <h2>Effiziente Terminverwaltung für Ihre Kanzlei</h2>
+                <p>
+                    Optimieren Sie Ihre Kanzleiprozesse mit einer smarten, digitalen Terminverwaltung. Unsere Lösung synchronisiert alle Termine automatisch, reduziert Verwaltungsaufwand und sorgt dafür, dass Ihr Team jederzeit den vollen Überblick behält – sicher, zuverlässig und mandantenfreundlich.
+                </p>
+            </div>
+            <div class="kernfunktionen-grid">
+                <div class="kernfunktion-card">
+                    <div class="kernfunktion-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <line x1="16" y1="2" x2="16" y2="6" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="8" y1="2" x2="8" y2="6" stroke="#8A2BE2" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="3" y1="10" x2="21" y2="10" stroke="#8A2BE2" stroke-width="2"/>
+                            <text x="12" y="18" font-size="10" font-weight="bold" text-anchor="middle" fill="#8A2BE2">17</text>
+                        </svg>
+                    </div>
+                    <h3>Mandantentermine</h3>
+                    <p>Mandanten buchen Termine eigenständig – mit automatischer Bestätigung.</p>
+                </div>
+                <div class="kernfunktion-card">
+                    <div class="kernfunktion-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <path d="M12 2v20" stroke="#8A2BE2" stroke-width="2"/>
+                            <path d="M2 7l10 5 10-5" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <circle cx="7" cy="12" r="1.5" fill="#8A2BE2"/>
+                            <circle cx="17" cy="12" r="1.5" fill="#8A2BE2"/>
+                        </svg>
+                    </div>
+                    <h3>Fristenverwaltung</h3>
+                    <p>Juristische Fristen mit Vorwarnungen und Wiedervorlagen.</p>
+                </div>
+                <div class="kernfunktion-card">
+                    <div class="kernfunktion-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <circle cx="12" cy="8" r="1" fill="#8A2BE2"/>
+                        </svg>
+                    </div>
+                    <h3>Erinnerungen</h3>
+                    <p>SMS, E-Mail und Push reduzieren No-Shows signifikant.</p>
+                </div>
+                <div class="kernfunktion-card">
+                    <div class="kernfunktion-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="7" r="4" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <circle cx="17" cy="7" r="4" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="#8A2BE2" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Anwalt</h3>
+                    <p>Individuelle Kalender für jeden Anwalt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verbindung Section -->
+    <section class="verbindung-section">
+        <div class="verbindung-container">
+            <div class="verbindung-header">
+                <h2>Unsere Online-Kalender sind kompatibel mit ihrem Kalender</h2>
+                <p>
+                    Unsere Online-Kalender überzeugen nicht nur durch ein modernes und professionelles Design, sondern lassen sich auch nahtlos mit nahezu jeder Anwendung verbinden. Auf Wunsch synchronisieren wir euren Kalender zuverlässig mit privaten oder geschäftlichen Systemen, sodass Termine direkt und in Echtzeit über eure Webanwendung gebucht werden können. Zudem richten wir für euch verschiedene individuelle Anbindungen und Integrationen ein – genau passend zu euren Anforderungen.
+                </p>
+            </div>
+            <div class="verbindung-item">
+                <div class="verbindung-item-content">
+                    <h3>
+                        <div class="scroll-text">
+                            <span>Google Calendar</span>
+                            <span>Google Calendar</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Unsere Online-Kalender lassen sich nahtlos mit dem Google Calendar verbinden. So werden Termine automatisch zwischen eurer Webanwendung und eurem Google-Konto synchronisiert – in Echtzeit und vollständig geräteunabhängig. Ideal für Teams, die flexibel arbeiten und jederzeit den Überblick behalten möchten.
+                    </p>
+                </div>
+                <div class="verbindung-item-image">
+                    <img src="googlekalender.png" alt="Google Calendar">
+                </div>
+            </div>
+            <div class="verbindung-item">
+                <div class="verbindung-item-content">
+                    <h3>
+                        <div class="scroll-text">
+                            <span>Microsoft Outlook</span>
+                            <span>Microsoft Outlook</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Dank der direkten Anbindung an Microsoft Outlook können neue Buchungen sofort in eurem Outlook-Kalender erscheinen. Geschäftsmeetings, Kundentermine und interne Abstimmungen bleiben dadurch perfekt organisiert. Die Synchronisation funktioniert zuverlässig über Office 365 sowie Exchange.
+                    </p>
+                </div>
+                <div class="verbindung-item-image">
+                    <img src="outlook.png" alt="Microsoft Outlook">
+                </div>
+            </div>
+            <div class="verbindung-item">
+                <div class="verbindung-item-content">
+                    <h3>
+                        <div class="scroll-text">
+                            <span>Apple Calendar</span>
+                            <span>Apple Calendar</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Auch Nutzer des Apple Kalenders profitieren von unserer intelligenten Synchronisation. Termine aus eurer Webanwendung werden automatisch auf alle Apple-Geräte übertragen – egal ob iPhone, iPad oder Mac. So bleibt euer Kalender überall aktuell und perfekt abgestimmt.
+                    </p>
+                </div>
+                <div class="verbindung-item-image">
+                    <img src="apple calendar.png" alt="Apple Calendar">
+                </div>
+            </div>
+            <div class="verbindung-item">
+                <div class="verbindung-item-content">
+                    <h3>
+                        <div class="scroll-text">
+                            <span>Videocalls</span>
+                            <span>Videocalls</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Für Online-Besprechungen integrieren wir auf Wunsch automatische Videocall-Erstellungen. Jede Terminbuchung kann automatisch einen individuellen Meeting-Link für Dienste wie Zoom, Google Meet oder Microsoft Teams erzeugen – effizient, unkompliziert und sofort einsatzbereit.
+                    </p>
+                </div>
+                <div class="verbindung-item-image">
+                    <img src="googlemeet.png" alt="Videocalls">
+                </div>
+            </div>
+            <div class="verbindung-item">
+                <div class="verbindung-item-content">
+                    <h3>
+                        <div class="scroll-text">
+                            <span>SMS & Mail</span>
+                            <span>SMS & Mail</span>
+                        </div>
+                    </h3>
+                    <p>
+                        Mit unserer SMS- und E-Mail-Integration erhalten eure Kundinnen und Kunden automatische Terminbestätigungen und Erinnerungen. Das reduziert Ausfälle, steigert die Professionalität und sorgt für eine optimale Kommunikation – ganz ohne zusätzlichen Aufwand für euch.
+                    </p>
+                </div>
+                <div class="verbindung-item-image">
+                    <img src="sms.png" alt="SMS & Mail">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="ctaSection">
+        <div class="cta-grid">
+            <div class="cta-content">
+                <h2>Bereit für Ihre neue Website?</h2>
+                <p>
+                    <a href="bewerbungsportal.html" target="_blank">
+                        Bewerbe dich gerne bei uns
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-left: 6px; vertical-align: middle;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+            <a href="behindbars.html" class="cta-image">
+                <img src="bbbbb.png" alt="CTA Image">
+                <span class="cta-image-text">
+                    Beispiel für einen Online-Kalender
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: inline-block; margin-left: 6px; vertical-align: middle;">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <polyline points="15 3 21 3 21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="10" y1="14" x2="21" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+    </div>
+
+    <!-- Card Toggle Button -->
+    <a href="bewerbungsformular.html" class="card-toggle liquid-glass" id="cardToggle">
+        <svg class="card-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span class="card-toggle-text">
+            <div class="scroll-text">
+                <span>BEWIRB DICH</span>
+                <span>BEWIRB DICH</span>
+            </div>
+        </span>
+    </a>
+
+    <!-- Card Slide Panel -->
+    <div class="card-slide-panel" id="cardSlidePanel">
+        <button class="close-button" id="closeCardPanel">×</button>
+        
+        <div class="panel-header">
+            <span class="panel-header-title">Unsere Visitenkarten</span>
+            <p class="panel-header-description">Klicken sie gerne auf die Links auf der Visitenkarte, um mit uns ins Gespräch zu kommen</p>
+        </div>
+        
+        <div class="business-cards-container">
+            <!-- Card 1 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card" id="businessCard1">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>Leon Chiosea</h2>
+                                    <div class="title">Backend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+4917623592839" class="contact-item">+49 176 23592839</a>
+                                    <a href="mailto:leon@dev-design.studio" class="contact-item">leon@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DEV</div>
+                    </div>
+                </div>
+                <!-- Switch Container 1 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">Leon Chiosea</span>
+                    <div class="card-switch" id="cardSwitch">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card active" id="businessCard2">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>David Chiosea</h2>
+                                    <div class="title">Frontend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+491743992254" class="contact-item">+49 1743992254</a>
+                                    <a href="mailto:david@dev-design.studio" class="contact-item">david@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DESIGN</div>
+                    </div>
+                </div>
+                <!-- Switch Container 2 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">David Chiosea</span>
+                    <div class="card-switch" id="cardSwitch2">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="footerSection">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-heading">Kontakt aufnehmen</h3>
+                <p class="footer-subheading">Lassen Sie uns sprechen - ohne Druck, nur Klarheit.</p>
+                <div class="footer-buttons">
+                    <a href="#" class="footer-button footer-button-primary" id="footerBewerbungButton">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>Bewerbung abschicken</span>
+                                <span>Bewerbung abschicken</span>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/491743992254" class="footer-button footer-button-secondary" target="_blank">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>WhatsApp</span>
+                                <span>WhatsApp</span>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="mailto:david@dev-design.studio" class="footer-button footer-button-secondary">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>E-Mail senden</span>
+                                <span>E-Mail senden</span>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <p class="footer-disclaimer">
+                    Durch die Nutzung dieser Website oder das Absenden einer Beratungsanfrage stimmen Sie unserem <a href="datenschutz.html">Datenschutz</a> zu. Ihre Daten werden sicher gespeichert und niemals ohne Ihre Zustimmung weitergegeben.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Schnellzugriff:</h3>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>2 BRÜDER</span>
+                            <span>2 BRÜDER</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link" id="footerBewerbungsformular">
+                        <div class="scroll-text">
+                            <span>BEWERBUNGSFORMULAR</span>
+                            <span>BEWERBUNGSFORMULAR</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>KONTAKT</span>
+                            <span>KONTAKT</span>
+                        </div>
+                    </a>
+                    <a href="impressum.html" class="footer-link">
+                        <div class="scroll-text">
+                            <span>IMPRESSUM</span>
+                            <span>IMPRESSUM</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Social Media:</h3>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>LINKEDIN</span>
+                            <span>LINKEDIN</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>INSTAGRAM</span>
+                            <span>INSTAGRAM</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Adresse:</h3>
+                <p class="footer-address">Charlottenburger Straße 110A, 13086 Berlin</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 - Alle Rechte vorbehalten</p>
+            <p class="footer-credit">WEBSITE BY DEV DESIGN</p>
+        </div>
+        
+        <div class="footer-logo-text">DEVDESIGN</div>
+    </footer>
+
+    <!-- GSAP von CDN für bessere Performance -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+

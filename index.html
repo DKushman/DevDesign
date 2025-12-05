@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Webdesign & Webapps für Notare | Digitale Integrationen & moderne Kanzlei-Lösungen</title>
+    <meta name="description" content="Professionelles Webdesign, individuelle Webapps und smarte digitale Integrationen speziell für Notare. Wir modernisieren notarielle Abläufe, schaffen effiziente Online-Prozesse und entwickeln sichere, maßgeschneiderte Lösungen für Ihre Kanzlei.">
+    <meta name="keywords" content="Webdesign Notare, Webapps Notare, digitale Integrationen Notare, Kanzlei-Lösungen, Notar Webdesign, Online-Prozesse Notare">
+    <link rel="canonical" href="https://www.dev-design.studio/webdesign-webapps-notare">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Webdesign & Webapps für Notare | Digitale Integrationen & moderne Kanzlei-Lösungen">
+    <meta property="og:description" content="Professionelles Webdesign, individuelle Webapps und smarte digitale Integrationen speziell für Notare. Wir modernisieren notarielle Abläufe, schaffen effiziente Online-Prozesse und entwickeln sichere, maßgeschneiderte Lösungen für Ihre Kanzlei.">
+    <meta property="og:url" content="https://www.dev-design.studio/webdesign-webapps-notare">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Webdesign & Webapps für Notare | Digitale Integrationen & moderne Kanzlei-Lösungen">
+    <meta name="twitter:description" content="Professionelles Webdesign, individuelle Webapps und smarte digitale Integrationen speziell für Notare. Wir modernisieren notarielle Abläufe, schaffen effiziente Online-Prozesse und entwickeln sichere, maßgeschneiderte Lösungen für Ihre Kanzlei.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Preconnect zu CDNs für schnellere Verbindung -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    
+    <!-- Font Loading - Performance optimiert (lädt parallel, blockiert nicht) -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/switzer">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-content">
+            <h3 class="cookie-banner-title">Cookie-Einstellungen</h3>
+            <p class="cookie-banner-text">
+                Wir verwenden Cookies, um unsere Website und unseren Service zu optimieren.<br>
+                Einige Cookies sind erforderlich, um die grundlegende Funktionalität sicherzustellen.<br>
+                Andere – wie Google Analytics – helfen uns, diese Website zu verbessern, indem sie anonyme Nutzungsstatistiken erfassen.<br>
+                Du kannst selbst entscheiden, ob du der Verwendung dieser Cookies zustimmst.<br>
+                Weitere Informationen findest du in unserer <a href="datenschutz.html" class="cookie-banner-link">Datenschutzerklärung</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-banner-btn cookie-banner-btn-accept" id="cookieAccept">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Akzeptieren</span>
+                            <span>Akzeptieren</span>
+                        </div>
+                    </span>
+                </button>
+                <button class="cookie-banner-btn cookie-banner-btn-decline" id="cookieDecline">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Ablehnen</span>
+                            <span>Ablehnen</span>
+                        </div>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-image" id="cursorImage">
+        <img src="" alt="Project Preview" id="cursorImageSrc">
+    </div>
+    
+    <div class="hero-section" id="heroSection">
+        <div class="pilcrow-symbol" id="pilcrowSymbol" data-symbol="§">§</div>
+        <h1 class="hero-title">Websiten, Webapps & Integrationen für <strong>Notare</strong></h1>
+        <p class="hero-description">Wer modernisiert Kanzlei und Notarwebsiten? Wie richte ich eine Online-Terminbuchung für meine Kanzlei ein? Welche Software brauche ich, um meine Urkunden digital zu verwalten? Wie kann ich Dokumente elektronisch (QES) unterschreiben als Notar? Was muss ich tun, um Online-Beurkundungen anbieten zu können?</p>
+        <div class="scroll-hint liquid-glass">
+            <span class="scroll-hint-text">
+                <div class="scroll-text">
+                    <span>WIR HELFEN!</span>
+                    <span>WIR HELFEN!</span>
+                </div>
+            </span>
+            <span class="scroll-hint-arrow">↓</span>
+        </div>
+    </div>
+    
+    <div class="loading-number" id="loadingNumber">0</div>
+    
+    <div class="loading-line">
+        <div class="loading-line-fill" id="loadingLineFill"></div>
+    </div>
+    
+    <!-- Mobile Burger Menu -->
+    <div class="mobile-burger" id="mobileBurger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item" data-index="0">HOME</a>
+            <a href="team.html" class="mobile-menu-item" data-index="1">2 Brüder</a>
+            <a href="service1.html" class="mobile-menu-item" data-index="2">Services</a>
+            <div class="mobile-menu-item" data-index="3">Kunden</div>
+            <div class="mobile-menu-item" data-index="4">Bewerbungsformular</div>
+        </div>
+    </div>
+    
+    <!-- Hauptnavigation mit Header -->
+    <header>
+        <div class="menu" id="menu">
+        <div class="navigation-container">
+            <div class="location-link" id="locationLink">
+                <div class="scroll-text">
+                    <span>BERLIN, GERMANY</span>
+                    <span>BERLIN, GERMANY</span>
+                </div>
+            </div>
+            
+            <div class="center-links" id="centerLinks">
+                <a href="team.html" class="center-link" id="brothersLink">
+                    <div class="scroll-text">
+                        <span>2 BRÜDER</span>
+                        <span>2 BRÜDER</span>
+                    </div>
+                </a>
+                
+                <a href="service1.html" class="center-link" id="servicesLink">
+                    <div class="scroll-text">
+                        <span>SERVICES</span>
+                        <span>SERVICES</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </a>
+                
+                <div class="center-link" id="kundenLink">
+                    <div class="scroll-text">
+                        <span>ARBEITEN</span>
+                        <span>ARBEITEN</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </div>
+                
+                <a href="bewerbungsformular.html" class="center-link" id="projectsLink">
+                    <div class="scroll-text">
+                        <span>BEWERBUNGSFORMULAR</span>
+                        <span>BEWERBUNGSFORMULAR</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="contact-link" id="contactLink">
+                <div class="scroll-text">
+                    <span>KONTAKT</span>
+                    <span>KONTAKT</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Header - Der echte Header (mit mix-blend-mode) -->
+        <a href="index.html" class="header">
+            <span class="word">
+                <span class="first-letter">D</span><span class="rest-letters">evDesign</span>
+            </span>
+            <span class="word">
+                <span class="firstp-letter">.</span><span class="rest-letters">studio</span>
+            </span>
+        </a>
+    </header>
+
+    <!-- Card Toggle Button -->
+    <a href="bewerbungsformular.html" class="card-toggle liquid-glass" id="cardToggle">
+        <svg class="card-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span class="card-toggle-text">
+            <div class="scroll-text">
+                <span>BEWIRB DICH</span>
+                <span>BEWIRB DICH</span>
+            </div>
+        </span>
+    </a>
+
+    <!-- Card Slide Panel -->
+    <div class="card-slide-panel" id="cardSlidePanel">
+        <button class="close-button" id="closeCardPanel">×</button>
+        
+        <div class="panel-header">
+            <span class="panel-header-title">Unsere Visitenkarten</span>
+            <p class="panel-header-description">Klicken sie gerne auf die Links auf der Visitenkarte, um mit uns ins Gespräch zu kommen</p>
+        </div>
+        
+        <div class="business-cards-container">
+            <!-- Card 1 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card" id="businessCard1">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>Leon Chiosea</h2>
+                                    <div class="title">Backend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+4917623592839" class="contact-item">+49 176 23592839</a>
+                                    <a href="mailto:leon@dev-design.studio" class="contact-item">leon@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DEV</div>
+                    </div>
+                </div>
+                <!-- Switch Container 1 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">Leon Chiosea</span>
+                    <div class="card-switch" id="cardSwitch">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card active" id="businessCard2">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>David Chiosea</h2>
+                                    <div class="title">Frontend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+491743992254" class="contact-item">+49 1743992254</a>
+                                    <a href="mailto:david@dev-design.studio" class="contact-item">david@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DESIGN</div>
+                    </div>
+                </div>
+                <!-- Switch Container 2 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">David Chiosea</span>
+                    <div class="card-switch" id="cardSwitch2">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Questionnaire Overlay removed - only exists on test.html -->
+
+    <div class="main-content" id="mainContent">
+        <section class="main-section" id="mainSection">
+            <div class="client-container" id="clientContainer">
+                <span class="client-label">[ARBEITEN]</span>
+                <div class="client-section">
+                    <h2>Unsere Kundenprojekte</h2>
+                    <p class="client-description">Unsere Projekte sind das Gesamtpaket: Funktionsoptimiert, Verkaufsoptimiert, Suchmaschinenoptimiert und an den Kunden angepasst.</p>
+                </div>
+                <div class="client-list">
+                    <div class="client-item" data-client="0">
+                        <span class="client-name">STAFFCONNECT</span>
+                        <span class="client-symbol"><img src="LOGO trans.png" alt="StaffConnect Logo" class="client-logo" loading="lazy"></span>
+            </div>
+                    <div class="client-item" data-client="1">
+                        <span class="client-name">HTW</span>
+                        <span class="client-symbol"><img src="htw.png" alt="HTW Logo" class="client-logo" loading="lazy"></span>
+        </div>
+                    <div class="client-item" data-client="2">
+                        <span class="client-name">YNDYGO</span>
+                        <span class="client-symbol"><img src="Logo-red.png" alt="YNDYGO Logo" class="client-logo" loading="lazy"></span>
+    </div>
+                    <div class="client-item" data-client="3">
+                        <span class="client-name">BEHINDBARS</span>
+                        <span class="client-symbol"><img src="logo \"\".png" alt="BehindBars Logo" class="client-logo" loading="lazy"></span>
+                    </div>
+                    <div class="client-item" data-client="4">
+                        <span class="client-name">CONCEPT</span>
+                        <span class="client-symbol">📦</span>
+                    </div>
+                </div>
+                <!-- Logo Display -->
+                <div class="logo-display" id="logoDisplay">
+                    <div class="logo-item default-circle" data-logo="default">
+                        Klick die<br>Namen
+                    </div>
+                    <div class="logo-item" data-logo="0">
+                        <img src="LOGO trans.png" alt="StaffConnect Logo" loading="lazy">
+                    </div>
+                    <div class="logo-item" data-logo="1">
+                        <img src="htw.png" alt="HTW Logo" loading="lazy">
+                    </div>
+                    <div class="logo-item" data-logo="2">
+                        <img src="Logo-red.png" alt="YNDYGO Logo" loading="lazy">
+                    </div>
+                    <div class="logo-item" data-logo="3">
+                        <img src="BBloog.png" alt="BehindBars Logo" loading="lazy">
+                    </div>
+                    <div class="logo-item emoji" data-logo="4">📦</div>
+                </div>
+                
+                <div class="client-image-container">
+                    <video class="client-image" data-index="0" autoplay loop muted playsinline preload="auto"></video>
+                    <video class="client-image" data-index="1" autoplay loop muted playsinline preload="none" loading="lazy"></video>
+                    <video class="client-image" data-index="2" autoplay loop muted playsinline preload="none" loading="lazy"></video>
+                    <video class="client-image" data-index="3" autoplay loop muted playsinline preload="none" loading="lazy"></video>
+                    <video class="client-image" data-index="4" autoplay loop muted playsinline preload="none" loading="lazy"></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="spacer-section" id="spacerSection"></section>
+
+        <section class="studio-section" id="studioSection">
+            <div class="studio-text-container">
+                <p class="studio-animated-text" id="studioText">
+                    Unsere <strong>Mission</strong> ist es, Notaren moderne, <strong>rechtssichere</strong> und benutzerfreundliche Weblösungen bereitzustellen – von der <strong>Website</strong> über <strong>digitale Formulare</strong> bis zur sicheren Online-Terminvergabe. So machen wir den Notaralltag <strong>effizient</strong>, sichtbar und zukunftsfähig.
+                </p>
+            </div>
+        </section>
+
+        <!-- Bereiche -->
+        <section class="overlapping-screens-wrapper" id="overlappingScreensWrapper">
+            <div class="expanding-container" id="expandingSection">
+                <div class="expanding-box" id="expandingBox"></div>
+                <p class="expanding-box-text" id="expandingText">[BACKEND & FRONTEND]</p>
+                <div class="expanding-content">
+                </div>
+            </div>
+            <div class="overlapping-screen" id="screen1" data-screen="1">
+                <div class="screen-text-content">
+                    <img src="image.png" alt="" class="screen-image" loading="lazy">
+                    <div class="screen-text-wrapper">
+                        <h2>Website & Online-Präsenz</h2>
+                        <div class="screen-buttons">
+                            <a href="service1.html" class="screen-button liquid-glass screen-button-left">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>MEHR ERFAHREN</span>
+                                        <span>MEHR ERFAHREN</span>
+                                    </div>
+                                </span>
+                            </a>
+                            <a href="kontaktformular.html" class="screen-button liquid-glass screen-button-right">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>JETZT ANFRAGEN</span>
+                                        <span>JETZT ANFRAGEN</span>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlapping-screen" id="screen2" data-screen="2">
+                <div class="screen-text-content">
+                    <img src="image 2.png" alt="" class="screen-image" loading="lazy">
+                    <div class="screen-text-wrapper">
+                        <h2>Online-Terminbuchung</h2>
+                        <div class="screen-buttons">
+                            <a href="onlinekalender.html" class="screen-button liquid-glass screen-button-left">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>MEHR ERFAHREN</span>
+                                        <span>MEHR ERFAHREN</span>
+                                    </div>
+                                </span>
+                            </a>
+                            <a href="kontaktformular.html" class="screen-button liquid-glass screen-button-right">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>JETZT ANFRAGEN</span>
+                                        <span>JETZT ANFRAGEN</span>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlapping-screen" id="screen3" data-screen="3">
+                <div class="screen-text-content">
+                    <img src="image 3.png" alt="" class="screen-image" loading="lazy">
+                    <div class="screen-text-wrapper">
+                        <h2>Digitalen Mandatenservice & Formulare</h2>
+                        <div class="screen-buttons">
+                            <a href="#" class="screen-button liquid-glass screen-button-left">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>MEHR ERFAHREN</span>
+                                        <span>MEHR ERFAHREN</span>
+                                    </div>
+                                </span>
+                            </a>
+                            <a href="kontaktformular.html" class="screen-button liquid-glass screen-button-right">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>JETZT ANFRAGEN</span>
+                                        <span>JETZT ANFRAGEN</span>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlapping-screen" id="screen4" data-screen="4">
+                <div class="screen-text-content">
+                    <img src="image 4.png" alt="" class="screen-image" loading="lazy">
+                    <div class="screen-text-wrapper">
+                        <h2>Dokumentenmanagement & Arbeitsabläufe</h2>
+                        <div class="screen-buttons">
+                            <a href="#" class="screen-button liquid-glass screen-button-left">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>MEHR ERFAHREN</span>
+                                        <span>MEHR ERFAHREN</span>
+                                    </div>
+                                </span>
+                            </a>
+                            <a href="kontaktformular.html" class="screen-button liquid-glass screen-button-right">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>JETZT ANFRAGEN</span>
+                                        <span>JETZT ANFRAGEN</span>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlapping-screen" id="screen5" data-screen="5">
+                <div class="screen-text-content">
+                    <img src="image 5.png" alt="" class="screen-image" loading="lazy">
+                    <div class="screen-text-wrapper">
+                        <h2>E-Signatur & Online-Beurkundungen</h2>
+                        <div class="screen-buttons">
+                            <a href="#" class="screen-button liquid-glass screen-button-left">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>MEHR ERFAHREN</span>
+                                        <span>MEHR ERFAHREN</span>
+                                    </div>
+                                </span>
+                            </a>
+                            <a href="kontaktformular.html" class="screen-button liquid-glass screen-button-right">
+                                <span class="card-toggle-text">
+                                    <div class="scroll-text">
+                                        <span>JETZT ANFRAGEN</span>
+                                        <span>JETZT ANFRAGEN</span>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section" id="footerSection">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-heading">Kontakt aufnehmen</h3>
+                    <p class="footer-subheading">Lassen Sie uns sprechen - ohne Druck, nur Klarheit.</p>
+                    <div class="footer-buttons">
+                        <a href="#" class="footer-button footer-button-primary" id="footerBewerbungButton">
+                            <span class="footer-button-text">
+                                <div class="scroll-text">
+                                    <span>Bewerbung abschicken</span>
+                                    <span>Bewerbung abschicken</span>
+                                </div>
+                            </span>
+                        </a>
+                        <a href="https://wa.me/491743992254" class="footer-button footer-button-secondary" target="_blank">
+                            <span class="footer-button-text">
+                                <div class="scroll-text">
+                                    <span>WhatsApp</span>
+                                    <span>WhatsApp</span>
+                                </div>
+                            </span>
+                        </a>
+                        <a href="mailto:david@dev-design.studio" class="footer-button footer-button-secondary">
+                            <span class="footer-button-text">
+                                <div class="scroll-text">
+                                    <span>E-Mail senden</span>
+                                    <span>E-Mail senden</span>
+                                </div>
+                            </span>
+                        </a>
+                    </div>
+                    <p class="footer-disclaimer">
+                        Durch die Nutzung dieser Website oder das Absenden einer Beratungsanfrage stimmen Sie unserem <a href="datenschutz.html">Datenschutz</a> zu. Ihre Daten werden sicher gespeichert und niemals ohne Ihre Zustimmung weitergegeben.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Schnellzugriff:</h3>
+                    <nav class="footer-nav">
+                        <a href="#" class="footer-link">
+                            <div class="scroll-text">
+                                <span>2 BRÜDER</span>
+                                <span>2 BRÜDER</span>
+                            </div>
+                        </a>
+                        <a href="#" class="footer-link" id="footerBewerbungsformular">
+                            <div class="scroll-text">
+                                <span>BEWERBUNGSFORMULAR</span>
+                                <span>BEWERBUNGSFORMULAR</span>
+                            </div>
+                        </a>
+                        <a href="#" class="footer-link">
+                            <div class="scroll-text">
+                                <span>KONTAKT</span>
+                                <span>KONTAKT</span>
+                            </div>
+                        </a>
+                        <a href="impressum.html" class="footer-link">
+                            <div class="scroll-text">
+                                <span>IMPRESSUM</span>
+                                <span>IMPRESSUM</span>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Social Media:</h3>
+                    <nav class="footer-nav">
+                        <a href="#" class="footer-link">
+                            <div class="scroll-text">
+                                <span>LINKEDIN</span>
+                                <span>LINKEDIN</span>
+                            </div>
+                        </a>
+                        <a href="#" class="footer-link">
+                            <div class="scroll-text">
+                                <span>INSTAGRAM</span>
+                                <span>INSTAGRAM</span>
+                            </div>
+                        </a>
+                    </nav>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-heading">Adresse:</h3>
+                    <p class="footer-address">Charlottenburger Straße 110A, 13086 Berlin</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2025 - Alle Rechte vorbehalten</p>
+                <p class="footer-credit">WEBSITE BY DEV DESIGN</p>
+            </div>
+            
+            <div class="footer-logo-text">DEVDESIGN</div>
+        </footer>
+    </div>
+
+    <!-- GSAP Skripte von CDN für bessere Performance -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js" defer></script>
+    
+    <!-- Main.js muss nach GSAP geladen werden -->
+        <script src="main.js" defer></script>
+</body>
+</html>
+

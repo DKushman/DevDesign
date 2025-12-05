@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Service 1 | DevDesign.studio</title>
+    <meta name="description" content="Service 1 - DevDesign.studio">
+    <meta name="keywords" content="Service 1">
+    <link rel="canonical" href="https://www.dev-design.studio/service1">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Service 1 | DevDesign.studio">
+    <meta property="og:description" content="Service 1 - DevDesign.studio">
+    <meta property="og:url" content="https://www.dev-design.studio/service1">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Service 1 | DevDesign.studio">
+    <meta name="twitter:description" content="Service 1 - DevDesign.studio">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Preconnect zu CDNs für schnellere Verbindung -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    
+    <!-- Font Loading - Performance optimiert (lädt parallel, blockiert nicht) -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/switzer">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="scrollable">
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-content">
+            <h3 class="cookie-banner-title">Cookie-Einstellungen</h3>
+            <p class="cookie-banner-text">
+                Wir verwenden Cookies, um unsere Website und unseren Service zu optimieren.<br>
+                Einige Cookies sind erforderlich, um die grundlegende Funktionalität sicherzustellen.<br>
+                Andere – wie Google Analytics – helfen uns, diese Website zu verbessern, indem sie anonyme Nutzungsstatistiken erfassen.<br>
+                Du kannst selbst entscheiden, ob du der Verwendung dieser Cookies zustimmst.<br>
+                Weitere Informationen findest du in unserer <a href="datenschutz.html" class="cookie-banner-link">Datenschutzerklärung</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-banner-btn cookie-banner-btn-accept" id="cookieAccept">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Akzeptieren</span>
+                            <span>Akzeptieren</span>
+                        </div>
+                    </span>
+                </button>
+                <button class="cookie-banner-btn cookie-banner-btn-decline" id="cookieDecline">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Ablehnen</span>
+                            <span>Ablehnen</span>
+                        </div>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-image" id="cursorImage">
+        <img src="" alt="Project Preview" id="cursorImageSrc">
+    </div>
+    
+    <!-- Mobile Burger Menu -->
+    <div class="mobile-burger" id="mobileBurger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item" data-index="0">HOME</a>
+            <a href="team.html" class="mobile-menu-item" data-index="1">2 Brüder</a>
+            <div class="mobile-menu-item" data-index="2">Bewerbungsformular</div>
+        </div>
+    </div>
+    
+    <!-- Hauptnavigation mit Header -->
+    <header>
+        <div class="menu" id="menu">
+        <div class="navigation-container">
+            <div class="location-link" id="locationLink">
+                <div class="scroll-text">
+                    <span>BERLIN, GERMANY</span>
+                    <span>BERLIN, GERMANY</span>
+                </div>
+            </div>
+            
+            <div class="center-links" id="centerLinks">
+                <a href="team.html" class="center-link" id="brothersLink">
+                    <div class="scroll-text">
+                        <span>2 BRÜDER</span>
+                        <span>2 BRÜDER</span>
+                    </div>
+                </a>
+                
+                <a href="service1.html" class="center-link" id="servicesLink">
+                    <div class="scroll-text">
+                        <span>SERVICES</span>
+                        <span>SERVICES</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </a>
+                
+                <div class="center-link" id="kundenLink">
+                    <div class="scroll-text">
+                        <span>ARBEITEN</span>
+                        <span>ARBEITEN</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </div>
+                
+                <a href="bewerbungsformular.html" class="center-link" id="projectsLink">
+                    <div class="scroll-text">
+                        <span>BEWERBUNGSFORMULAR</span>
+                        <span>BEWERBUNGSFORMULAR</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="contact-link" id="contactLink">
+                <div class="scroll-text">
+                    <span>KONTAKT</span>
+                    <span>KONTAKT</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Header - Der echte Header (mit mix-blend-mode) -->
+        <a href="index.html" class="header header-static">
+            <span class="word">
+                <span class="first-letter">D</span><span class="rest-letters">evDesign</span>
+            </span>
+            <span class="word">
+                <span class="firstp-letter">.</span><span class="rest-letters">studio</span>
+            </span>
+        </a>
+    </header>
+    
+    <!-- Service Content Container -->
+    <div class="service-content-container">
+    <!-- Service Section -->
+    <section class="service-section">
+        <div class="service-header">
+            <span class="service-tag">[SERVICE 01 — WEBSITE & ONLINE-PRÄSENZ]</span>
+            <h1>Professionelle Websites für Notare und Anwaltskanzleien</h1>
+            <div class="service-intro">
+                <p class="intro-text">Spezialisierte Webentwicklung für Rechtsdienstleister. Vertrauenswürdig, DSGVO-konform und mandantenorientiert – von der ersten Beratung bis zur vollständigen digitalen Kanzleipräsenz mit professionellem Logo und Corporate Design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excellence Section -->
+    <section class="excellence-section">
+        <div class="excellence-container">
+            <div class="section-header">
+                <h2>Kanzlei-Websites mit höchsten Standards</h2>
+                <p class="section-description">Speziell entwickelt für die Anforderungen von Notaren und Anwaltskanzleien. Sicher, vertrauenswürdig und auf Mandantengewinnung optimiert.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="feature-number">01</div>
+                    <h3>Mandantenorientiertes Design</h3>
+                    <p>Professionelle Gestaltung, die Vertrauen schafft und Ihre Expertise unterstreicht.</p>
+                    <ul class="feature-list">
+                        <li>Seriöses, rechtskonformes Design</li>
+                        <li>Klare Darstellung der Fachgebiete</li>
+                        <li>Anwaltsprofil und Kanzlei-Team</li>
+                        <li>Mandantenreferenzen und Erfolge</li>
+                        <li>Kontaktformular mit SSL-Verschlüsselung</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="feature-number">02</div>
+                    <h3>DSGVO & Berufsrecht</h3>
+                    <p>Vollständige Compliance mit Datenschutz und anwaltlichen Berufsordnungen.</p>
+                    <ul class="feature-list">
+                        <li>DSGVO-konforme Umsetzung</li>
+                        <li>Berufsrechtskonforme Darstellung</li>
+                        <li>Sichere Mandantenkommunikation</li>
+                        <li>Cookie-Consent Management</li>
+                        <li>Datenschutzerklärung & Impressum</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="feature-number">03</div>
+                    <h3>Lokales SEO für Kanzleien</h3>
+                    <p>Optimierung für lokale Suchanfragen und Mandantengewinnung in Ihrer Region.</p>
+                    <ul class="feature-list">
+                        <li>Google Business Profile Optimierung</li>
+                        <li>Lokale Suchbegriffe (z.B. "Notar Frankfurt")</li>
+                        <li>Rechtsgebiet-spezifisches SEO</li>
+                        <li>Schema Markup für Anwaltskanzleien</li>
+                        <li>Juristische Fachartikel & Blog</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="feature-number">04</div>
+                    <h3>Funktionen für Kanzleien</h3>
+                    <p>Spezialisierte Features für den Kanzleialltag und die Mandantenbetreuung.</p>
+                    <ul class="feature-list">
+                        <li>Online-Terminbuchung</li>
+                        <li>Verschlüsselter Mandantenbereich</li>
+                        <li>Honorarrechner & Kostenvoranschlag</li>
+                        <li>FAQ zu Rechtsgebieten</li>
+                        <li>Newsletter für Rechtsthemen</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v6h-2V7zm0 8h2v2h-2v-2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="feature-number">05</div>
+                    <h3>Performance & Sicherheit</h3>
+                    <p>Höchste technische Standards für schnelle Ladezeiten und maximale Sicherheit.</p>
+                    <ul class="feature-list">
+                        <li>SSL-Verschlüsselung (HTTPS)</li>
+                        <li>Tägliche Backups</li>
+                        <li>DDoS-Schutz und Firewall</li>
+                        <li>Optimierte Ladegeschwindigkeit</li>
+                        <li>Mobile-optimierte Darstellung</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="feature-number">06</div>
+                    <h3>Analytics & Erfolgsmessung</h3>
+                    <p>Transparente Erfolgskontrolle Ihrer digitalen Mandantenakquise.</p>
+                    <ul class="feature-list">
+                        <li>Besucherstatistiken & Conversion-Tracking</li>
+                        <li>Kontaktanfragen-Analyse</li>
+                        <li>Keyword-Rankings überwachen</li>
+                        <li>Monatliche Performance-Reports</li>
+                        <li>ROI-Messung für Online-Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-stack-header">
+                    <h3>Technologie-Stack für Kanzlei-Websites</h3>
+                    <p>Moderne, sichere und skalierbare Technologien für professionelle Rechtsdienstleister</p>
+                </div>
+                <div class="tech-columns">
+                    <div class="tech-column">
+                        <h4>Frontend</h4>
+                        <ul class="tech-items">
+                            <li>React / Next.js</li>
+                            <li>HTML5 / CSS3</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <div class="tech-column">
+                        <h4>Backend</h4>
+                        <ul class="tech-items">
+                            <li>Node.js / Express</li>
+                            <li>RESTful APIs</li>
+                            <li>PostgreSQL / MongoDB</li>
+                            <li>Authentication & JWT</li>
+                        </ul>
+                    </div>
+                    <div class="tech-column">
+                        <h4>Sicherheit</h4>
+                        <ul class="tech-items">
+                            <li>SSL/TLS Verschlüsselung</li>
+                            <li>OWASP Standards</li>
+                            <li>Security Headers</li>
+                            <li>DSGVO-Tools</li>
+                        </ul>
+                    </div>
+                    <div class="tech-column">
+                        <h4>Hosting</h4>
+                        <ul class="tech-items">
+                            <li>Eigener Server</li>
+                            <li>CDN Integration</li>
+                            <li>Automated Backups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expansion Section -->
+    <section class="expansion-section">
+        <h2>Erweiterung Ihrer Online-Präsenz</h2>
+        <div class="expansion-grid">
+            <div class="expansion-card">
+                <h3>E-Commerce Integration</h3>
+                <p>Erweitern Sie Ihre Website um einen vollwertigen Online-Shop. Produktverwaltung, Zahlungsabwicklung und Bestellsystem nahtlos integriert.</p>
+            </div>
+            <div class="expansion-card">
+                <h3>Multi-Language Support</h3>
+                <p>Erreichen Sie internationale Märkte mit mehrsprachigen Websites. Vollständige Lokalisierung und kulturelle Anpassung Ihrer Inhalte.</p>
+            </div>
+            <div class="expansion-card">
+                <h3>Web Application</h3>
+                <p>Entwicklung komplexer Webanwendungen mit erweiterten Funktionen. Kundenportale, Dashboards und individualisierte User Experiences.</p>
+            </div>
+            <div class="expansion-card">
+                <h3>Social Media Integration</h3>
+                <p>Verbinden Sie Ihre Website mit Ihren Social-Media-Kanälen. Automatische Content-Synchronisation und einheitliche Markenpräsenz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="ctaSection">
+        <h2>Bereit für Ihre neue Website?</h2>
+        <p>Lassen Sie uns gemeinsam Ihre digitale Präsenz aufbauen.</p>
+    </section>
+    </div>
+
+    <!-- Card Toggle Button -->
+    <a href="bewerbungsformular.html" class="card-toggle liquid-glass" id="cardToggle">
+        <svg class="card-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span class="card-toggle-text">
+            <div class="scroll-text">
+                <span>BEWIRB DICH</span>
+                <span>BEWIRB DICH</span>
+            </div>
+        </span>
+    </a>
+
+    <!-- Card Slide Panel -->
+    <div class="card-slide-panel" id="cardSlidePanel">
+        <button class="close-button" id="closeCardPanel">×</button>
+        
+        <div class="panel-header">
+            <span class="panel-header-title">Unsere Visitenkarten</span>
+            <p class="panel-header-description">Klicken sie gerne auf die Links auf der Visitenkarte, um mit uns ins Gespräch zu kommen</p>
+        </div>
+        
+        <div class="business-cards-container">
+            <!-- Card 1 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card" id="businessCard1">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>Leon Chiosea</h2>
+                                    <div class="title">Backend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+4917623592839" class="contact-item">+49 176 23592839</a>
+                                    <a href="mailto:leon@dev-design.studio" class="contact-item">leon@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DEV</div>
+                    </div>
+                </div>
+                <!-- Switch Container 1 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">Leon Chiosea</span>
+                    <div class="card-switch" id="cardSwitch">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card active" id="businessCard2">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>David Chiosea</h2>
+                                    <div class="title">Frontend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+491743992254" class="contact-item">+49 1743992254</a>
+                                    <a href="mailto:david@dev-design.studio" class="contact-item">david@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DESIGN</div>
+                    </div>
+                </div>
+                <!-- Switch Container 2 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">David Chiosea</span>
+                    <div class="card-switch" id="cardSwitch2">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="footerSection">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-heading">Kontakt aufnehmen</h3>
+                <p class="footer-subheading">Lassen Sie uns sprechen - ohne Druck, nur Klarheit.</p>
+                <div class="footer-buttons">
+                    <a href="#" class="footer-button footer-button-primary" id="footerBewerbungButton">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>Bewerbung abschicken</span>
+                                <span>Bewerbung abschicken</span>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/491743992254" class="footer-button footer-button-secondary" target="_blank">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>WhatsApp</span>
+                                <span>WhatsApp</span>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="mailto:david@dev-design.studio" class="footer-button footer-button-secondary">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>E-Mail senden</span>
+                                <span>E-Mail senden</span>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <p class="footer-disclaimer">
+                    Durch die Nutzung dieser Website oder das Absenden einer Beratungsanfrage stimmen Sie unserem <a href="datenschutz.html">Datenschutz</a> zu. Ihre Daten werden sicher gespeichert und niemals ohne Ihre Zustimmung weitergegeben.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Schnellzugriff:</h3>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>2 BRÜDER</span>
+                            <span>2 BRÜDER</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link" id="footerBewerbungsformular">
+                        <div class="scroll-text">
+                            <span>BEWERBUNGSFORMULAR</span>
+                            <span>BEWERBUNGSFORMULAR</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>KONTAKT</span>
+                            <span>KONTAKT</span>
+                        </div>
+                    </a>
+                    <a href="impressum.html" class="footer-link">
+                        <div class="scroll-text">
+                            <span>IMPRESSUM</span>
+                            <span>IMPRESSUM</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Social Media:</h3>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>LINKEDIN</span>
+                            <span>LINKEDIN</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>INSTAGRAM</span>
+                            <span>INSTAGRAM</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Adresse:</h3>
+                <p class="footer-address">Charlottenburger Straße 110A, 13086 Berlin</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 - Alle Rechte vorbehalten</p>
+            <p class="footer-credit">WEBSITE BY DEV DESIGN</p>
+        </div>
+        
+        <div class="footer-logo-text">DEVDESIGN</div>
+    </footer>
+
+    <!-- GSAP von CDN für bessere Performance -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+

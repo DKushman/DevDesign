@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>BEHINDBARS | DevDesign.studio</title>
+    <meta name="description" content="BEHINDBARS - Entwicklung einer immersiven Website mit Fokus auf Storytelling und visuelle Erzählung">
+    <meta name="keywords" content="BEHINDBARS, Web Design, Content Strategy, Video Integration">
+    <link rel="canonical" href="https://www.dev-design.studio/behindbars">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BEHINDBARS | DevDesign.studio">
+    <meta property="og:description" content="BEHINDBARS - Entwicklung einer immersiven Website mit Fokus auf Storytelling und visuelle Erzählung">
+    <meta property="og:url" content="https://www.dev-design.studio/behindbars">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BEHINDBARS | DevDesign.studio">
+    <meta name="twitter:description" content="BEHINDBARS - Entwicklung einer immersiven Website mit Fokus auf Storytelling und visuelle Erzählung">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Preconnect zu CDNs für schnellere Verbindung -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    
+    <!-- Font Loading - Performance optimiert (lädt parallel, blockiert nicht) -->
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/switzer">
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="scrollable">
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-content">
+            <h3 class="cookie-banner-title">Cookie-Einstellungen</h3>
+            <p class="cookie-banner-text">
+                Wir verwenden Cookies, um unsere Website und unseren Service zu optimieren.<br>
+                Einige Cookies sind erforderlich, um die grundlegende Funktionalität sicherzustellen.<br>
+                Andere – wie Google Analytics – helfen uns, diese Website zu verbessern, indem sie anonyme Nutzungsstatistiken erfassen.<br>
+                Du kannst selbst entscheiden, ob du der Verwendung dieser Cookies zustimmst.<br>
+                Weitere Informationen findest du in unserer <a href="datenschutz.html" class="cookie-banner-link">Datenschutzerklärung</a>.
+            </p>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-banner-btn cookie-banner-btn-accept" id="cookieAccept">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Akzeptieren</span>
+                            <span>Akzeptieren</span>
+                        </div>
+                    </span>
+                </button>
+                <button class="cookie-banner-btn cookie-banner-btn-decline" id="cookieDecline">
+                    <span class="cookie-btn-text">
+                        <div class="scroll-text">
+                            <span>Ablehnen</span>
+                            <span>Ablehnen</span>
+                        </div>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="cursor-image" id="cursorImage">
+        <img src="" alt="Project Preview" id="cursorImageSrc">
+    </div>
+    
+    <!-- Mobile Burger Menu -->
+    <div class="mobile-burger" id="mobileBurger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-menu-item" data-index="0">HOME</a>
+            <a href="team.html" class="mobile-menu-item" data-index="1">2 Brüder</a>
+            <a href="service1.html" class="mobile-menu-item" data-index="2">Services</a>
+            <div class="mobile-menu-item" data-index="3">Kunden</div>
+            <div class="mobile-menu-item" data-index="4">Bewerbungsformular</div>
+        </div>
+    </div>
+    
+    <!-- Hauptnavigation mit Header -->
+    <header>
+        <div class="menu" id="menu">
+        <div class="navigation-container">
+            <div class="location-link" id="locationLink">
+                <div class="scroll-text">
+                    <span>BERLIN, GERMANY</span>
+                    <span>BERLIN, GERMANY</span>
+                </div>
+            </div>
+            
+            <div class="center-links" id="centerLinks">
+                <a href="team.html" class="center-link" id="brothersLink">
+                    <div class="scroll-text">
+                        <span>2 BRÜDER</span>
+                        <span>2 BRÜDER</span>
+                    </div>
+                </a>
+                
+                <a href="service1.html" class="center-link" id="servicesLink">
+                    <div class="scroll-text">
+                        <span>SERVICES</span>
+                        <span>SERVICES</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </a>
+                
+                <div class="center-link" id="kundenLink">
+                    <div class="scroll-text">
+                        <span>ARBEITEN</span>
+                        <span>ARBEITEN</span>
+                    </div>
+                    <span class="nav-indicator-circle"></span>
+                </div>
+                
+                <a href="bewerbungsformular.html" class="center-link" id="projectsLink">
+                    <div class="scroll-text">
+                        <span>BEWERBUNGSFORMULAR</span>
+                        <span>BEWERBUNGSFORMULAR</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="contact-link" id="contactLink">
+                <div class="scroll-text">
+                    <span>KONTAKT</span>
+                    <span>KONTAKT</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Header - Der echte Header (mit mix-blend-mode) -->
+        <a href="index.html" class="header header-static">
+            <span class="word">
+                <span class="first-letter">D</span><span class="rest-letters">evDesign</span>
+            </span>
+            <span class="word">
+                <span class="firstp-letter">.</span><span class="rest-letters">studio</span>
+            </span>
+        </a>
+    </header>
+    
+    <!-- Client Project Content -->
+    <div class="client-project-content">
+        <div class="client-overlay-content">
+            <div class="client-overlay-header">
+                <h1 class="client-overlay-name">BEHINDBARS</h1>
+            </div>
+            <div class="client-overlay-details">
+                <div class="client-overlay-column">
+                    <div class="client-overlay-label">YEAR</div>
+                    <div class="client-overlay-value">2024</div>
+                </div>
+                <div class="client-overlay-column">
+                    <div class="client-overlay-label">SERVICES</div>
+                    <div class="client-overlay-services">
+                        <div class="client-overlay-service-tag">WEB DESIGN</div>
+                        <div class="client-overlay-service-tag">CONTENT STRATEGY</div>
+                        <div class="client-overlay-service-tag">VIDEO INTEGRATION</div>
+                        <div class="client-overlay-service-tag">SOCIAL MEDIA INTEGRATION</div>
+                        <div class="client-overlay-service-tag">ANIMATION</div>
+                    </div>
+                </div>
+                <div class="client-overlay-column">
+                    <div class="client-overlay-label">SUMMARY</div>
+                    <div class="client-overlay-summary">
+                        Entwicklung einer immersiven Website für BehindBars mit Fokus auf Storytelling und visuelle Erzählung. Integration von Video-Content und interaktiven Elementen für eine einzigartige Nutzererfahrung.
+                    </div>
+                    <a href="#" class="client-overlay-link" target="_blank">
+                        VISIT SITE
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="client-overlay-cards">
+                <div class="client-overlay-card">
+                    <div class="client-overlay-card-content">
+                        <!-- Additional project images/content can go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" id="footerSection">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="footer-heading">Kontakt aufnehmen</h3>
+                <p class="footer-subheading">Lassen Sie uns sprechen - ohne Druck, nur Klarheit.</p>
+                <div class="footer-buttons">
+                    <a href="#" class="footer-button footer-button-primary" id="footerBewerbungButton">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>Bewerbung abschicken</span>
+                                <span>Bewerbung abschicken</span>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="https://wa.me/491743992254" class="footer-button footer-button-secondary" target="_blank">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>WhatsApp</span>
+                                <span>WhatsApp</span>
+                            </div>
+                        </span>
+                    </a>
+                    <a href="mailto:david@dev-design.studio" class="footer-button footer-button-secondary">
+                        <span class="footer-button-text">
+                            <div class="scroll-text">
+                                <span>E-Mail senden</span>
+                                <span>E-Mail senden</span>
+                            </div>
+                        </span>
+                    </a>
+                </div>
+                <p class="footer-disclaimer">
+                    Durch die Nutzung dieser Website oder das Absenden einer Beratungsanfrage stimmen Sie unserem <a href="datenschutz.html">Datenschutz</a> zu. Ihre Daten werden sicher gespeichert und niemals ohne Ihre Zustimmung weitergegeben.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Schnellzugriff:</h3>
+                <nav class="footer-nav">
+                    <a href="team.html" class="footer-link">
+                        <div class="scroll-text">
+                            <span>2 BRÜDER</span>
+                            <span>2 BRÜDER</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link" id="footerBewerbungsformular">
+                        <div class="scroll-text">
+                            <span>BEWERBUNGSFORMULAR</span>
+                            <span>BEWERBUNGSFORMULAR</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>KONTAKT</span>
+                            <span>KONTAKT</span>
+                        </div>
+                    </a>
+                    <a href="impressum.html" class="footer-link">
+                        <div class="scroll-text">
+                            <span>IMPRESSUM</span>
+                            <span>IMPRESSUM</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Social Media:</h3>
+                <nav class="footer-nav">
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>LINKEDIN</span>
+                            <span>LINKEDIN</span>
+                        </div>
+                    </a>
+                    <a href="#" class="footer-link">
+                        <div class="scroll-text">
+                            <span>INSTAGRAM</span>
+                            <span>INSTAGRAM</span>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-heading">Adresse:</h3>
+                <p class="footer-address">Charlottenburger Straße 110A, 13086 Berlin</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 - Alle Rechte vorbehalten</p>
+            <p class="footer-credit">WEBSITE BY DEV DESIGN</p>
+        </div>
+        
+        <div class="footer-logo-text">DEVDESIGN</div>
+    </footer>
+
+    <!-- GSAP von CDN für bessere Performance -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+

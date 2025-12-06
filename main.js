@@ -2764,3 +2764,134 @@ function initOnlineKalender() {
 }
 
 onDOMReady(initOnlineKalender);
+
+// Mandantenservice Features Animation
+function initMandantenserviceFeatures() {
+    document.querySelectorAll('.feature-number').forEach(num => {
+        gsap.to(num, {
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: num.closest('.mandantenservice-feature-item'),
+                start: "top 80%"
+            }
+        });
+    });
+}
+
+onDOMReady(initMandantenserviceFeatures);
+
+// Beurkundungen Section Animation
+function initBeurkundungenAnimation() {
+    document.querySelectorAll('.beurkundung-number').forEach(num => {
+        gsap.to(num, {
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: num.closest('.beurkundung-step'),
+                start: "top 80%"
+            }
+        });
+    });
+}
+
+onDOMReady(initBeurkundungenAnimation);
+
+// Navigation Overlays für ARBEITEN und SERVICES
+function initNavigationOverlays() {
+    const arbeitenLink = document.getElementById('kundenLink');
+    const servicesLink = document.getElementById('servicesLink');
+    const arbeitenOverlay = document.getElementById('arbeitenOverlay');
+    const servicesOverlay = document.getElementById('servicesOverlay');
+    
+    if (!arbeitenLink || !servicesLink || !arbeitenOverlay || !servicesOverlay) return;
+    
+    let arbeitenTimeout;
+    let servicesTimeout;
+    let currentOverlay = null;
+    
+    // Funktion zum Schließen eines Overlays
+    function closeOverlay(overlay) {
+        if (overlay && overlay.classList.contains('active')) {
+            overlay.classList.remove('active');
+            currentOverlay = null;
+        }
+        // Body-Klasse entfernen, wenn kein Overlay mehr aktiv ist
+        if (!arbeitenOverlay.classList.contains('active') && !servicesOverlay.classList.contains('active')) {
+            document.body.classList.remove('overlay-active');
+        }
+    }
+    
+    // Funktion zum Öffnen eines Overlays
+    function openOverlay(overlay) {
+        // Schließe das andere Overlay, falls offen
+        if (currentOverlay && currentOverlay !== overlay) {
+            closeOverlay(currentOverlay);
+        }
+        
+        if (overlay && !overlay.classList.contains('active')) {
+            overlay.classList.add('active');
+            currentOverlay = overlay;
+            // Body-Klasse hinzufügen, um Content nach unten zu verschieben
+            document.body.classList.add('overlay-active');
+        }
+    }
+    
+    // ARBEITEN Hover Events
+    arbeitenLink.addEventListener('mouseenter', () => {
+        clearTimeout(arbeitenTimeout);
+        openOverlay(arbeitenOverlay);
+    });
+    
+    arbeitenLink.addEventListener('mouseleave', () => {
+        arbeitenTimeout = setTimeout(() => {
+            closeOverlay(arbeitenOverlay);
+        }, 200);
+    });
+    
+    // SERVICES Hover Events
+    servicesLink.addEventListener('mouseenter', () => {
+        clearTimeout(servicesTimeout);
+        openOverlay(servicesOverlay);
+    });
+    
+    servicesLink.addEventListener('mouseleave', () => {
+        servicesTimeout = setTimeout(() => {
+            closeOverlay(servicesOverlay);
+        }, 200);
+    });
+    
+    // Overlay Hover Events - damit das Overlay offen bleibt, wenn man darüber hovert
+    arbeitenOverlay.addEventListener('mouseenter', () => {
+        clearTimeout(arbeitenTimeout);
+    });
+    
+    arbeitenOverlay.addEventListener('mouseleave', () => {
+        arbeitenTimeout = setTimeout(() => {
+            closeOverlay(arbeitenOverlay);
+        }, 200);
+    });
+    
+    servicesOverlay.addEventListener('mouseenter', () => {
+        clearTimeout(servicesTimeout);
+    });
+    
+    servicesOverlay.addEventListener('mouseleave', () => {
+        servicesTimeout = setTimeout(() => {
+            closeOverlay(servicesOverlay);
+        }, 200);
+    });
+    
+    // Schließe Overlays beim Klick außerhalb
+    document.addEventListener('click', (e) => {
+        if (!arbeitenLink.contains(e.target) && !servicesLink.contains(e.target) &&
+            !arbeitenOverlay.contains(e.target) && !servicesOverlay.contains(e.target)) {
+            closeOverlay(arbeitenOverlay);
+            closeOverlay(servicesOverlay);
+        }
+    });
+}
+
+onDOMReady(initNavigationOverlays);

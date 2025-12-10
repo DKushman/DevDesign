@@ -1031,11 +1031,9 @@ function transitionToLightMode() {
         
         if (navigationContainer) {
             tl.fromTo(navigationContainer, {
-                opacity: 0,
-                y: -20
+                opacity: 0
             }, {
                 opacity: 1,
-                y: 0,
                 duration: 0.8,
                 ease: "power3.out"
             }, 1.1);
@@ -1043,7 +1041,11 @@ function transitionToLightMode() {
     } else {
         if (centerLinks) gsap.set(centerLinks, { opacity: 1, immediateRender: true });
         if (mobileBurger) gsap.set(mobileBurger, { opacity: 1, xPercent: -50, immediateRender: true });
-        if (navigationContainer) gsap.set(navigationContainer, { opacity: 1, immediateRender: true });
+        if (navigationContainer) {
+            gsap.set(navigationContainer, { opacity: 1, immediateRender: true });
+            // GSAP-Kontrolle über y entfernen, damit CSS die Transform kontrollieren kann
+            gsap.set(navigationContainer, { clearProps: 'y' });
+        }
     }
 }
 
@@ -1887,9 +1889,62 @@ if (mobileBurgerBtn) {
     });
 }
 
+// Mobile Menu Submenu Toggle
+const mobileMenuHeaders = document.querySelectorAll('.mobile-menu-header');
+mobileMenuHeaders.forEach(header => {
+    header.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const subitems = header.nextElementSibling;
+        if (subitems && subitems.classList.contains('mobile-menu-subitems')) {
+            const isActive = header.classList.contains('active');
+            
+            // Toggle active state
+            header.classList.toggle('active');
+            subitems.classList.toggle('active');
+            
+            // Animate subitems
+            if (!isActive) {
+                // Opening - ensure display is set first
+                subitems.style.display = 'flex';
+                const subitemElements = subitems.querySelectorAll('.mobile-menu-subitem');
+                gsap.fromTo(subitemElements, {
+                    opacity: 0,
+                    y: -10
+                }, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.3,
+                    stagger: 0.05,
+                    ease: "power2.out"
+                });
+            } else {
+                // Closing
+                const subitemElements = subitems.querySelectorAll('.mobile-menu-subitem');
+                gsap.to(subitemElements, {
+                    opacity: 0,
+                    y: -10,
+                    duration: 0.2,
+                    stagger: 0.03,
+                    ease: "power2.in",
+                    onComplete: () => {
+                        subitems.style.display = 'none';
+                    }
+                });
+            }
+        }
+    });
+});
+
 // Menu Items Click - Nur schließen wenn kein Link (z.B. Bewerbungsformular)
 mobileMenuItems.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+        // Wenn es ein Header ist, wird es von der obigen Funktion gehandhabt
+        if (item.classList.contains('mobile-menu-header')) {
+            return;
+        }
+        
         // Wenn es ein Link ist, wird die Navigation von initPageTransitions() gehandhabt
         // Overlay wird nicht geschlossen, damit die Transition flüssig ist
         if (!item.href || item.tagName !== 'A') {
@@ -2808,8 +2863,8 @@ function initNavigationOverlays() {
     
     if (!arbeitenLink || !servicesLink || !arbeitenOverlay || !servicesOverlay) return;
     
-    let arbeitenTimeout;
-    let servicesTimeout;
+    let arbeitenTimeout, arbeitenAnimationTimeout;
+    let servicesTimeout, servicesAnimationTimeout;
     let currentOverlay = null;
     
     // Funktion zum Schließen eines Overlays
@@ -2821,6 +2876,12 @@ function initNavigationOverlays() {
         // Body-Klasse entfernen, wenn kein Overlay mehr aktiv ist
         if (!arbeitenOverlay.classList.contains('active') && !servicesOverlay.classList.contains('active')) {
             document.body.classList.remove('overlay-active');
+            
+            // GSAP-Kontrolle entfernen, damit CSS die Transition übernimmt
+            const navigationContainer = cachedElements.navigationContainer || document.querySelector('.navigation-container');
+            if (navigationContainer && typeof gsap !== 'undefined') {
+                gsap.set(navigationContainer, { clearProps: 'y' });
+            }
         }
     }
     
@@ -2836,16 +2897,26 @@ function initNavigationOverlays() {
             currentOverlay = overlay;
             // Body-Klasse hinzufügen, um Content nach unten zu verschieben
             document.body.classList.add('overlay-active');
+            
+            // GSAP-Kontrolle entfernen, damit CSS die Transition übernimmt
+            const navigationContainer = cachedElements.navigationContainer || document.querySelector('.navigation-container');
+            if (navigationContainer && typeof gsap !== 'undefined') {
+                gsap.set(navigationContainer, { clearProps: 'y' });
+            }
         }
     }
     
     // ARBEITEN Hover Events
     arbeitenLink.addEventListener('mouseenter', () => {
         clearTimeout(arbeitenTimeout);
-        openOverlay(arbeitenOverlay);
+        clearTimeout(arbeitenAnimationTimeout);
+        arbeitenAnimationTimeout = setTimeout(() => {
+            openOverlay(arbeitenOverlay);
+        }, 300);
     });
     
     arbeitenLink.addEventListener('mouseleave', () => {
+        clearTimeout(arbeitenAnimationTimeout);
         arbeitenTimeout = setTimeout(() => {
             closeOverlay(arbeitenOverlay);
         }, 200);
@@ -2854,10 +2925,14 @@ function initNavigationOverlays() {
     // SERVICES Hover Events
     servicesLink.addEventListener('mouseenter', () => {
         clearTimeout(servicesTimeout);
-        openOverlay(servicesOverlay);
+        clearTimeout(servicesAnimationTimeout);
+        servicesAnimationTimeout = setTimeout(() => {
+            openOverlay(servicesOverlay);
+        }, 300);
     });
     
     servicesLink.addEventListener('mouseleave', () => {
+        clearTimeout(servicesAnimationTimeout);
         servicesTimeout = setTimeout(() => {
             closeOverlay(servicesOverlay);
         }, 200);

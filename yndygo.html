@@ -84,10 +84,35 @@
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
         <div class="mobile-menu-content">
             <a href="index.html" class="mobile-menu-item" data-index="0">HOME</a>
-            <a href="team.html" class="mobile-menu-item" data-index="1">2 Brüder</a>
-            <a href="service1.html" class="mobile-menu-item" data-index="2">Services</a>
-            <div class="mobile-menu-item" data-index="3">Kunden</div>
-            <div class="mobile-menu-item" data-index="4">Bewerbungsformular</div>
+            <a href="team.html" class="mobile-menu-item" data-index="1">2 BRÜDER</a>
+            <div class="mobile-menu-section">
+                <div class="mobile-menu-item mobile-menu-header" data-index="2">
+                    SERVICES
+                    <span class="mobile-nav-indicator-circle"></span>
+                </div>
+                <div class="mobile-menu-subitems">
+                    <a href="service1.html" class="mobile-menu-item mobile-menu-subitem" data-index="3">WEBSITE & ONLINE-PRÄSENZ</a>
+                    <a href="onlinekalender.html" class="mobile-menu-item mobile-menu-subitem" data-index="4">ONLINE-TERMINBUCHUNG</a>
+                    <a href="mandantenservice.html" class="mobile-menu-item mobile-menu-subitem" data-index="5">MANDANTENSERVICE</a>
+                    <a href="DMS.html" class="mobile-menu-item mobile-menu-subitem" data-index="6">DOKUMENTENMANAGEMENT</a>
+                    <a href="QES.html" class="mobile-menu-item mobile-menu-subitem" data-index="7">E-SIGNATUR & QES</a>
+                </div>
+            </div>
+            <div class="mobile-menu-section">
+                <div class="mobile-menu-item mobile-menu-header" data-index="8">
+                    ARBEITEN
+                    <span class="mobile-nav-indicator-circle"></span>
+                </div>
+                <div class="mobile-menu-subitems">
+                    <a href="staffconnect.html" class="mobile-menu-item mobile-menu-subitem" data-index="9">STAFFCONNECT</a>
+                    <a href="htw.html" class="mobile-menu-item mobile-menu-subitem" data-index="10">HTW</a>
+                    <a href="yndygo.html" class="mobile-menu-item mobile-menu-subitem" data-index="11">YNDYGO</a>
+                    <a href="behindbars.html" class="mobile-menu-item mobile-menu-subitem" data-index="12">BEHINDBARS</a>
+                    <a href="concept.html" class="mobile-menu-item mobile-menu-subitem" data-index="13">CONCEPT</a>
+                </div>
+            </div>
+            <a href="bewerbungsformular.html" class="mobile-menu-item" data-index="14">BEWERBUNGSFORMULAR</a>
+            <a href="kontaktformular.html" class="mobile-menu-item" data-index="15">KONTAKT</a>
         </div>
     </div>
     
@@ -224,17 +249,112 @@
             </span>
         </a>
     </header>
+
+    <!-- Card Slide Panel -->
+    <div class="card-slide-panel" id="cardSlidePanel">
+        <button class="close-button" id="closeCardPanel">×</button>
+        
+        <div class="panel-header">
+            <span class="panel-header-title">Unsere Visitenkarten</span>
+            <p class="panel-header-description">Klicken sie gerne auf die Links auf der Visitenkarte, um mit uns ins Gespräch zu kommen</p>
+        </div>
+        
+        <div class="business-cards-container">
+            <!-- Card 1 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card" id="businessCard1">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>Leon Chiosea</h2>
+                                    <div class="title">Backend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+4917623592839" class="contact-item">+49 176 23592839</a>
+                                    <a href="mailto:leon@dev-design.studio" class="contact-item">leon@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DEV</div>
+                    </div>
+                </div>
+                <!-- Switch Container 1 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">Leon Chiosea</span>
+                    <div class="card-switch" id="cardSwitch">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 with Switch -->
+            <div class="card-wrapper">
+                <div class="business-card active" id="businessCard2">
+                    <div class="card-face card-front">
+                        <div class="card-logo-text">DEVDESIGN.STUDIO</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 2;">
+                            <div class="contact-row" style="margin-top: 0;">
+                                <div class="contact-left">
+                                    <h2>David Chiosea</h2>
+                                    <div class="title">Frontend Developer</div>
+                                    <div class="department">Development + Design</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="tel:+491743992254" class="contact-item">+49 1743992254</a>
+                                    <a href="mailto:david@dev-design.studio" class="contact-item">david@dev-design.studio</a>
+                                </div>
+                            </div>
+                            <div class="contact-row" style="margin-bottom: 0;">
+                                <div class="contact-left">
+                                    <div class="address">Berlin<br>Germany</div>
+                                </div>
+                                <div class="contact-right">
+                                    <a href="https://www.dev-design.studio" class="contact-item" target="_blank">www.dev-design.studio</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embossed-text">DESIGN</div>
+                    </div>
+                </div>
+                <!-- Switch Container 2 -->
+                <div class="card-switch-container">
+                    <span class="card-switch-label">David Chiosea</span>
+                    <div class="card-switch" id="cardSwitch2">
+                        <div class="card-switch-slider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Client Project Content -->
     <div class="client-project-content">
         <div class="client-overlay-content">
             <div class="client-overlay-header">
                 <h1 class="client-overlay-name">YNDYGO</h1>
+                <div class="client-overlay-logo">
+                    <img src="Logo-red.png" alt="YNDYGO" Logo" loading="lazy">
+                </div>
             </div>
             <div class="client-overlay-details">
                 <div class="client-overlay-column">
                     <div class="client-overlay-label">YEAR</div>
-                    <div class="client-overlay-value">2024</div>
+                    <div class="client-overlay-value">2025</div>
                 </div>
                 <div class="client-overlay-column">
                     <div class="client-overlay-label">SERVICES</div>
@@ -242,12 +362,12 @@
                         <div class="client-overlay-service-tag">BRANDING</div>
                         <div class="client-overlay-service-tag">WEB DEVELOPMENT</div>
                         <div class="client-overlay-service-tag">E-COMMERCE</div>
-                        <div class="client-overlay-service-tag">PAYMENT INTEGRATION</div>
-                        <div class="client-overlay-service-tag">MOBILE OPTIMIZATION</div>
+                        <div class="client-overlay-service-tag">BEZAHLSYSTEM</div>
+                        <div class="client-overlay-service-tag">MOBILE OPTIMIERUNG</div>
                     </div>
                 </div>
                 <div class="client-overlay-column">
-                    <div class="client-overlay-label">SUMMARY</div>
+                    <div class="client-overlay-label">ZUSAMMENFASSUNG</div>
                     <div class="client-overlay-summary">
                         Komplette digitale Transformation für YNDYGO mit neuem Branding, E-Commerce-Plattform und nahtloser Payment-Integration. Die Lösung bietet eine intuitive Shopping-Erfahrung auf allen Geräten.
                     </div>

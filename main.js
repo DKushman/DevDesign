@@ -1325,11 +1325,11 @@ function animateClientImage(targetImage, show = true) {
 
 // Video sources mapping
 const videoSources = {
-    0: 'staff.mp4',
-    1: 'htw.mp4',
-    2: 'yndygo.mp4',
-    3: 'BehindBars.mov',
-    4: 'concept.mp4'
+    0: 'videos/staff.mp4',
+    1: 'videos/htw.mp4',
+    2: 'videos/yndygo.mp4',
+    3: 'videos/BehindBars.mov',
+    4: 'videos/concept.mp4'
 };
 
 // Consolidated video control functions
@@ -1591,11 +1591,11 @@ clientItems.forEach((item, index) => {
     // Click handler - navigate to project page
     item.addEventListener('click', () => {
         const projectPages = {
-            0: 'staffconnect.html',
-            1: 'htw.html',
-            2: 'yndygo.html',
-            3: 'behindbars.html',
-            4: 'concept.html'
+            0: 'arbeiten/staffconnect.html',
+            1: 'arbeiten/htw.html',
+            2: 'arbeiten/yndygo.html',
+            3: 'arbeiten/behindbars.html',
+            4: 'arbeiten/concept.html'
         };
         
         if (projectPages[index]) {
@@ -2853,6 +2853,23 @@ function initBeurkundungenAnimation() {
 }
 
 onDOMReady(initBeurkundungenAnimation);
+
+// Digitalisierung Section Animation
+function initDigitalisierungAnimation() {
+    document.querySelectorAll('.digitalisierung-number').forEach(num => {
+        gsap.to(num, {
+            y: 0,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: num.closest('.digitalisierung-card'),
+                start: "top 80%"
+            }
+        });
+    });
+}
+
+onDOMReady(initDigitalisierungAnimation);
 
 // Navigation Overlays für ARBEITEN und SERVICES
 function initNavigationOverlays() {

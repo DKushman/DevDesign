@@ -2529,13 +2529,13 @@ const teamData = {
         role: 'Frontend-Development',
         description: 'Mein Hintergrund liegt im Fashion Design. Ich liebe Ästhetik und habe eine Fashion Brand gegründet. Dann bin ich zum Webdesign und <strong>Frontend-Development</strong> gewechselt. <strong>MINIMALISMUS</strong> und <strong>FORMEN</strong> sind meine Leidenschaft.',
         quote: '"Mein Ziel ist es etwas zu kreieren was in Menschen Emotionen auslöst"',
-        image: 'WhatsApp Image 2025-10-27 at 11.39.05.jpeg'
+        image: 'images/WhatsApp Image 2025-10-27 at 11.39.05.jpeg'
     },
     leon: {
         role: 'Backend-Development',
         description: 'Mein Fokus liegt auf robusten und skalierbaren Backend-Lösungen. Ich entwickle Systeme, die nicht nur funktionieren, sondern auch wachsen können. <strong>ARCHITEKTUR</strong> und <strong>PERFORMANCE</strong> sind meine Stärken.',
         quote: '"Ich baue die unsichtbaren Fundamente, die großartige Erfahrungen ermöglichen"',
-        image: 'Bildschirmfoto 2025-11-12 um 15.30.31.png'
+        image: 'images/Bildschirmfoto 2025-11-12 um 15.30.31.png'
     }
 };
 
